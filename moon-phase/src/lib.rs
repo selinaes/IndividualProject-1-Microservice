@@ -1,7 +1,7 @@
 /* A library that returns back moon phase given day and location */
 
 use chrono::{DateTime, Utc};
-use reqwest
+use reqwest;
 use serde::Deserialize;
 
 #[derive(Deserialize, Debug)]
