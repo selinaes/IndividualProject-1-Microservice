@@ -2,6 +2,12 @@ install:
 	cargo clean &&\
 		cargo build -j 1
 
+build:
+	docker build -t moon-phase .
+
+rundocker:
+	docker run -it --rm -p 8080:8080 moon-phase
+
 format:
 	cargo fmt --quiet
 
