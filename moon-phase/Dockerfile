@@ -1,6 +1,6 @@
 FROM rust:latest as builder
-ENV APP moon_phase
-WORKDIR /usr/src/moon_phase
+ENV APP moon-phase
+WORKDIR /usr/src/moon-phase
 COPY . .
 RUN cargo install --path .
  
@@ -10,4 +10,4 @@ COPY --from=builder /usr/local/cargo/bin/$APP /usr/local/bin/$APP
 
 # expose this actix web service to port 8080 and 0.0.0.0
 EXPOSE 8080
-CMD ["moon_phase"]
+CMD ["moon-phase"]
